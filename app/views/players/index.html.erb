@@ -1,0 +1,13 @@
+<h1>Lista de Jogadores</h1>
+
+<% if @players.any? %>
+  <ul>
+    <% @players.each do |player| %>
+      <li>
+        <%= player['player']['name'] %> - Rating: <%= player['rating'] %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Nenhum jogador encontrado.</p>
+<% end %>
